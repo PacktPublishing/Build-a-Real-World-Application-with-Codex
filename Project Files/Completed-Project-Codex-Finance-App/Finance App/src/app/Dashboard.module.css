@@ -1,0 +1,185 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.header,
+.panelHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  color: #64748b;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.title {
+  margin: 0;
+  color: #172033;
+  font-size: 2rem;
+  line-height: 1.15;
+}
+
+.sectionTitle {
+  margin: 0;
+  color: #172033;
+  font-size: 1.25rem;
+  line-height: 1.2;
+}
+
+.summaryGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.summaryCard,
+.panel {
+  border: 1px solid #d9e1ec;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.summaryCard {
+  min-width: 0;
+  padding: 18px;
+}
+
+.cardLabel {
+  margin: 0 0 12px;
+  color: #64748b;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.cardValue {
+  margin: 0;
+  overflow-wrap: anywhere;
+  color: #172033;
+  font-size: 1.55rem;
+  font-weight: 800;
+  line-height: 1.15;
+}
+
+.dangerValue {
+  color: #b91c1c;
+}
+
+.panel {
+  overflow: hidden;
+}
+
+.panelHeader {
+  border-bottom: 1px solid #e2e8f0;
+  background: #f8fafc;
+  padding: 18px;
+}
+
+.chartFrame {
+  height: 320px;
+  padding: 18px 18px 12px;
+}
+
+.overdueList {
+  display: flex;
+  flex-direction: column;
+}
+
+.overdueRow {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 16px;
+  align-items: center;
+  border-bottom: 1px solid #e2e8f0;
+  color: inherit;
+  padding: 16px 18px;
+  text-decoration: none;
+}
+
+.overdueRow:last-child {
+  border-bottom: 0;
+}
+
+.overdueRow:hover {
+  background: #f8fafc;
+}
+
+.invoiceIdentity {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.clientName {
+  overflow: hidden;
+  color: #172033;
+  font-weight: 800;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.invoiceNumber {
+  color: #64748b;
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+.invoiceMeta {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  color: #64748b;
+  font-size: 0.92rem;
+  white-space: nowrap;
+}
+
+.invoiceMeta strong {
+  color: #b91c1c;
+}
+
+.emptyState {
+  padding: 32px;
+}
+
+.emptyTitle {
+  margin: 0 0 8px;
+  color: #172033;
+  font-size: 1.25rem;
+}
+
+.emptyText {
+  margin: 0;
+  color: #64748b;
+}
+
+@media (max-width: 1100px) {
+  .summaryGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  .title {
+    font-size: 1.65rem;
+  }
+
+  .summaryGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .overdueRow {
+    grid-template-columns: 1fr;
+  }
+
+  .invoiceMeta {
+    justify-content: space-between;
+  }
+}

@@ -1,0 +1,89 @@
+.backdrop {
+  position: fixed;
+  z-index: 50;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(15 23 42 / 0.52);
+  padding: 24px;
+}
+
+.modal {
+  width: min(420px, 100%);
+  border: 1px solid #d9e1ec;
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: 0 24px 48px rgb(15 23 42 / 0.22);
+  padding: 20px;
+}
+
+.title {
+  margin: 0;
+  color: #172033;
+  font-size: 1.2rem;
+  line-height: 1.3;
+}
+
+.message {
+  margin: 12px 0 0;
+  color: #334155;
+  line-height: 1.5;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.dangerButton,
+.secondaryButton {
+  display: inline-flex;
+  min-height: 40px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 700;
+  padding: 0 14px;
+  white-space: nowrap;
+}
+
+.dangerButton {
+  background: #b91c1c;
+  color: #ffffff;
+}
+
+.dangerButton:hover {
+  background: #991b1b;
+}
+
+.secondaryButton {
+  border-color: #cbd5e1;
+  background: #ffffff;
+  color: #334155;
+}
+
+.secondaryButton:hover {
+  background: #f8fafc;
+}
+
+.dangerButton:disabled,
+.secondaryButton:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+.error {
+  margin: 12px 0 0;
+  border-radius: 8px;
+  background: #fee2e2;
+  color: #991b1b;
+  font-size: 0.9rem;
+  font-weight: 700;
+  padding: 10px 12px;
+}

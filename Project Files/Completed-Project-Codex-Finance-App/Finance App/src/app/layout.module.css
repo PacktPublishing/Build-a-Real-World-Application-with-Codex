@@ -1,0 +1,48 @@
+.shell {
+  display: grid;
+  min-height: 100vh;
+  grid-template-columns: 260px minmax(0, 1fr);
+  background: #f1f5f9;
+}
+
+.content {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+}
+
+.main {
+  flex: 1;
+  padding: 32px;
+}
+
+@media (max-width: 760px) {
+  .shell {
+    grid-template-columns: 1fr;
+  }
+
+  .main {
+    padding: 20px;
+  }
+}
+
+@media print {
+  .shell {
+    display: block;
+    min-height: auto;
+    background: #ffffff;
+  }
+
+  .shell > aside,
+  .content > header {
+    display: none;
+  }
+
+  .content {
+    display: block;
+  }
+
+  .main {
+    padding: 0;
+  }
+}

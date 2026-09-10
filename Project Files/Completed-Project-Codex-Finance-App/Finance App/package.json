@@ -23,6 +23,6 @@
     "eslint": "^9",
     "eslint-config-next": "^16.2.9",
     "tailwindcss": "^4",
-    "vitest": "^4.1.9"
+    "vitest": "^4.1.11"
   }
 }
